@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    struct datosContacto{
+           string nombre, apellido;
+           int numero;
+    };
+    datosContacto contactos[100];
+           
+    int n=0; 
+    int opcion;
+    char respuesta='s';
+    do{
+         cout<<"1.Añadir contacto"<<endl;
+         cout<<"2.Ver todo"<<endl;
+         cin>>opcion;
+         
+         if(opcion=1){     
+           cout<<"Introduzca el nombre de su contacto: ";
+           cin>>contactos[n].nombre;
+           cout<<"Apellido: ";
+           cin>>contactos[n].apellido;
+           cout<<"Introduzca un numero de contacto: ";
+           cin>>contactos[n].numero;
+           cout<<"Desea añadir un nuevo contacto?: (s/n)";
+           cin>>respuesta;
+           if (respuesta=='s'){
+               n=n+1;}
+           else{
+                cout<<"1.Añadir contacto"<<endl;
+                cout<<"2.Ver todo"<<endl;
+                cin>>opcion;}
+         
+         while(respuesta=='s');}
+         
+         if(opcion=2){
+                      for(int i=0;i<n;i++){
+                              cout<<" "<<contactos[i].nombre<<endl;
+                              cout<<" "<<contactos[i].apellido<<endl;
+                              cout<<" "<<contactos[i].numero<<endl;
+                              }
+         }
+         while(opcion!=0);
+     
+     system("PAUSE");
+     return 0;
+}
