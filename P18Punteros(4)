@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+     char *lista[3];
+     lista[0]=(char *) malloc(8*sizeof(char)); 
+     lista[1]=(char *) malloc(7*sizeof(char));
+     lista[2]=(char *) malloc(9*sizeof(char)); 
+    
+}
